@@ -145,7 +145,7 @@ const App = () => {
         </section>
         <section className="results">
           <ul>
-            { results && renderResults(results) }
+            {results && renderResults(results)}
           </ul>
         </section>
       </div>
