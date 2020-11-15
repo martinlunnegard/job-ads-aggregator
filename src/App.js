@@ -12,7 +12,7 @@ import './App.css';
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState(''); 
-  const [results, setResults] = useState({});
+  const [results, setResults] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault(); 
@@ -96,8 +96,7 @@ const App = () => {
     const sortedList = sortData(results); 
     
     return (
-      Object.keys(sortedList).map(key => {
-        const item = sortedList[key];
+      sortedList.map(item => {
          return(
            <li className="item-container" key={item.id}>
             <div className="item-container__title">{strippTags(item.job_title)}</div>
